@@ -2,7 +2,7 @@
 layout: post
 title: Team Building
 date: 2020-09-07 9:58:00 +0900
-category: Software Engineering
+category: Software_Engineering
 ---
 
 ## 소프트웨어 공학 Team Building
