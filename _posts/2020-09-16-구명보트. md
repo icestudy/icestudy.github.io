@@ -1,0 +1,26 @@
+---
+layout: post
+title: 구명보트
+date: 2020-09-16 22:00:00 +0900
+category: Algorithm
+---
+### 서우빈
+```
+def solution(people, limit):
+    answer = 0
+    people = sorted(people)
+    front_count, end_count = 0,-1
+    while True:
+        if front_count>=len(people)+end_count:
+            if front_count==len(people)+end_count:
+                answer+=1
+            break
+        if people[front_count]+people[end_count]>limit:
+            answer+=1
+            end_count -=1
+        else:
+            front_count +=1
+            end_count -=1
+            answer += 1  
+    return answer
+```  
