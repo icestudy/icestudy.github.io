@@ -24,3 +24,23 @@ def solution(people, limit):
             answer += 1  
     return answer
 ```  
+### 전종원
+```
+def solution(people, limit):
+    answer = weight = 0
+    sorted_people = sorted(people)
+    i, j = 0, len(sorted_people) - 1 #인덱스 순회포인터 
+    while i < j:
+        if sorted_people[i] + sorted_people[j] > limit:
+            answer += 1
+            j -= 1
+            if j == i:
+                answer += 1
+        else:
+            answer += 1
+            j -= 1
+            i += 1
+            if i == j:
+                answer += 1
+    return answer
+    ```
